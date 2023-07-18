@@ -1,16 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:regular,500,600&display=swap);
 @font-face {
-	font-family: CalSans;
-	font-display: swap;
-	src: url("../fonts/CalSans-SemiBold.woff2") format("woff2"), url("../fonts/CalSans-SemiBold.woff") format("woff");
-	font-weight: 600;
-	font-style: normal;
+   font-family: CalSans;
+   font-display: swap;
+   src: url("../fonts/CalSans-SemiBold.woff2") format("woff2"), url("../fonts/CalSans-SemiBold.woff") format("woff");
+   font-weight: 600;
+   font-style: normal;
 }
 @import "_nullstyle.scss";
 @import "_variables.scss";
 
 body {
-   font-family: Poppins, sans-serif;   
+   font-family: Poppins, sans-serif;
    color: $main-text-color;
    background-color: $white-bgd-color;
 }
@@ -36,16 +36,128 @@ body {
 }
 
 //===========HEADER============//
-.header {     
+.header {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 5;
+   &__container {
+      display: flex;
+      align-items: center;
+      gap: 131px;
+      padding-top: 63px;
+   }
+   &__logo {
+      width: 123px;
+      height: 29px;
+      img {
+         max-height: 100%;
+      }
+   }
+   &__menu {
+   }
 }
-
+.menu {
+   &__list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 56px;
+   }
+   &__item {
+   }
+   &__link {
+      font-weight: 500;
+      line-height: 150%; /* 24px/16 */
+      color: inherit;
+      opacity: 0.4;
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}
 
 //================PAGES=============//
 .page {
    flex: 1 1 auto;
 }
+.page {
+   &__main {
+      // padding-top: 235px;
+      padding-bottom: 80px;
+   }
+}
 
+//================PAGE_MAIN=============//
+.main {
+   &__container {
+      display: flex;
+   }
+   &__content {
+      flex: 0 1 50%;
+      align-self: flex-end;
+      padding-bottom: 60px;
+   }
+   &__title {
+      color: $dark-text-color;
+      font-family: CalSans;
+      font-size: 56px;
+      line-height: 119.642857%; /* 67px/56 */
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      span {
+         color: #ff6428;
+      }
+      &:not(:last-child){
+         margin-bottom: 16px;
+      }
 
+   }
+   &__text {
+      max-width: 400px;
 
+      line-height: 150%; /* 24px/16 */
+      font-weight: 500;
+      &:not(:last-child){
+         margin-bottom: 33px;
+      }
+   }
+   &__actions {
+      display: flex;
+      align-items: center;
+   }
+   &__banner {
+      flex: 0 1 50%;
+   }
+}
+.actions-main {
+   &__button {
+      display: inline-flex;
+      padding: 18px 48px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 40px;
+      background: #ff6428;
+      color: #fff;
+      line-height: 150%; /* 24px/16 */
+      font-weight: 600;
+      &:not(:last-child){
+         margin-right: 40px;
+      }
+   }
+   &__icon {
+      &:not(:last-child){
+         margin-right: 28px;
+      }
+   }
+}
+
+.banner-main {
+		&__image {
+margin-right: -135px;
+      }
+}
 
 //=================FOOTER=============//
