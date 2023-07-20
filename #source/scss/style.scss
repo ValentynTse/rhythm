@@ -46,6 +46,10 @@ body {
    span {
       color: $primary-color;
    }
+   @media (max-width: 720px) {
+      margin-bottom: 40px;
+      font-size: 32px;
+   }
 }
 
 //===========HEADER============//
@@ -136,6 +140,35 @@ body {
    &__categories {
       padding-top: 90px;
       padding-bottom: 110px;
+      @media (max-width: 992px) {
+         padding-top: 50px;
+         padding-bottom: 50px;
+      }
+      @media (max-width: 767.9808px) {
+         padding-top: 30px;
+         padding-bottom: 30px;
+      }
+   }
+}
+.page {
+   &__brands {
+      padding-top: 110px;
+      padding-bottom: 90px;
+      @media (max-width: 992px) {
+         padding-top: 50px;
+         padding-bottom: 50px;
+      }
+      @media (max-width: 767.9808px) {
+         padding-top: 30px;
+         padding-bottom: 30px;
+      }
+   }
+}
+.page {
+   &__why {
+      background-color: $extra-dark-bgd-color;
+      padding-top: 94px;
+      padding-bottom: 94px;
       @media (max-width: 992px) {
          padding-top: 50px;
          padding-bottom: 50px;
@@ -287,10 +320,6 @@ body {
 .store {
    &__title {
       margin-bottom: 92px;
-      @media (max-width: 720px) {
-         margin-bottom: 50px;
-         font-size: 24px;
-      }
    }
    &__body {
       &:not(:last-child) {
@@ -388,10 +417,6 @@ body {
    }
    &__title {
       margin-bottom: 80px;
-      @media (max-width: 720px) {
-         margin-bottom: 40px;
-         font-size: 24px;
-      }
    }
    &__list {
       display: grid;
@@ -429,7 +454,7 @@ body {
       line-height: 150%; /* 30px/20 */
       font-weight: 600;
       color: $light-text-color;
-      z-index: 3;
+      z-index: 4;
    }
    &__image {
       display: block;
@@ -456,6 +481,116 @@ body {
          object-fit: cover;
          transition: all 0.3s ease 0s;
       }
+   }
+}
+
+//=================PAGE_BRANDS=============//
+.brands {
+   &__container {
+      max-width: 1020px;
+   }
+   &__title {
+      margin-bottom: 75px;
+      @media (max-width: 480px) {
+         margin-bottom: 15px;
+      }
+   }
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 160px;
+      row-gap: 80px;
+      @media (max-width: 992px) {
+         grid-template-columns: repeat(3, 1fr);
+         column-gap: 35px;
+      }
+      @media (max-width: 767.9808px) {
+         grid-template-columns: repeat(2, 1fr);
+         column-gap: 35px;
+      }
+      @media (max-width: 480px) {
+         grid-template-columns: repeat(1, 1fr);
+         column-gap: 35px;
+         row-gap: 35px;
+      }
+   }
+   &__item {
+      text-align: center;
+   }
+}
+.item-brand {
+   &:hover .item-brand__image img {
+      transform: scale(1.1);
+   }
+   &__image {
+      display: inline-block;
+      img {
+         max-width: 100%;
+         transition: all 0.3s ease 0s;
+      }
+   }
+}
+
+//=================PAGE_WHY=============//
+.why {
+   &__title {
+      color: $light-text-color;
+      margin-bottom: 75px;
+      @media (max-width: 480px) {
+         margin-bottom: 15px;
+      }
+   }
+   &__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @media (max-width: 520px) {
+         flex-direction: column;
+         align-items: center;
+      }
+   }
+   &__item {
+      flex: 0 1 33.33%;
+      height: 100%;
+      @media (max-width: 767.9808px) {
+         flex: 0 1 50%;
+         margin-bottom: 25px;
+      }
+      max-width: 230px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+}
+.item-why {
+   &__icon {
+      background-color: $dark-bgd-color;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 72px;
+      &:not(:last-child) {
+         margin-bottom: 40px;
+      }
+   }
+   &__title {
+      color: $light-text-color;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 150%; /* 27px/18 */
+      letter-spacing: 1.44px;
+      text-transform: uppercase;
+      &:not(:last-child) {
+         margin-bottom: 12px;
+      }
+   }
+   &__text {
+      text-align: center;
+      font-size: 14px;
+      line-height: 150%; /* 21px/14 */
+      text-transform: capitalize;
    }
 }
 
