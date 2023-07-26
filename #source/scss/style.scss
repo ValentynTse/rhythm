@@ -182,7 +182,7 @@ body {
 .page {
    &__customers {
       padding-top: 240px;
-      padding-bottom: 240px;
+      padding-bottom: 120px;
       @media (max-width: 992px) {
          padding-top: 50px;
          padding-bottom: 50px;
@@ -193,7 +193,20 @@ body {
       }
    }
 }
-
+.page {
+   &__favorite {
+      padding-top: 120px;
+      padding-bottom: 120px;
+      @media (max-width: 992px) {
+         padding-top: 50px;
+         padding-bottom: 50px;
+      }
+      @media (max-width: 767.9808px) {
+         padding-top: 30px;
+         padding-bottom: 30px;
+      }
+   }
+}
 //================PAGE_MAIN=============//
 .main {
    &__container {
@@ -724,7 +737,6 @@ body {
       text-transform: uppercase;
    }
 }
-
 .swiper-customers__pagination {
    display: flex;
    align-items: center;
@@ -740,6 +752,75 @@ body {
          flex: 0 0 12px;
          height: 24px;
          background: $primary-color;
+      }
+   }
+}
+
+//=================PAGE_FAVORITE=============//
+.favorite {
+   &__content {
+      display: flex;
+      @media (max-width: 767.9808px) {
+         flex-direction: column;
+      }
+      @media (max-width: 480px) {
+      }
+      align-items: center;
+   }
+   &__body {
+      flex: 0 1 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+   &__title {
+      text-align: left;
+      font-size: 48px;
+      line-height: 139.583333%; /* 67px/48 */
+      &:not(:last-child) {
+         margin-bottom: 60px;
+      }
+      @media (max-width: 768px) {
+         &:not(:last-child) {
+            margin-bottom: 40px;
+         }
+         font-size: 32px;
+      }
+   }
+   &__bages {
+      display: flex;
+      @media (max-width: 767.9808px) {
+         justify-content: center;
+         align-items: center;
+      }
+      @media (max-width: 480px) {
+         flex-direction: column;
+         gap: 10px;
+         align-items: center;
+      }
+   }
+   &__bage {
+      display: block;
+      &:not(:last-child) {
+         margin-right: 26px;
+      }
+      @media (max-width: 767.9808px) {
+         &:not(:last-child) {
+            margin-bottom: 20px;
+         }
+      }
+   }
+   &__link {
+      display: inline-block;
+      img {
+         max-width: 100%;
+      }
+   }
+   &__image {
+      flex: 0 1 50%;
+      text-align: center;
+      img {
+         max-width: 100%;
       }
    }
 }
