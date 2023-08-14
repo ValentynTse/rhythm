@@ -244,7 +244,7 @@ body {
 
 .page__brands {
   padding-top: 110px;
-  padding-bottom: 90px;
+  padding-bottom: 180px;
 }
 @media (max-width: 992px) {
   .page__brands {
@@ -1033,6 +1033,7 @@ body {
 .body-footer__logo {
   display: inline-block;
   height: 48px;
+  width: 102px;
 }
 .body-footer__logo:not(:last-child) {
   margin-bottom: 28px;
